@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>games</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Knewave&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../page.css">
+</head>
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../logo.png" alt="kris yuan" width="450px" height="165px">
+      </a>
+    </div>
+  </div>
+  <!-- navigation bar -->
+  <div class="navbar">
+
+    <a href="../games/games.html">games</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">illustration</button>
+      <div class="dropdown-content">
+        <a href="../illustration/digital.html">digital</a>
+        <a href="../illustration/traditional.html">traditional</a>
+      </div>
+    </div>
+
+    <a href="../index.html">about</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">design</button>
+      <div class="dropdown-content">
+        <a href="../design/graphic.html">graphic</a>
+        <a href="../design/web.html">web</a>
+      </div>
+    </div> 
+
+    <a href="../code/code.html">code</a>
+  </div>
+
+  <!-- content -->
+  <div class="games">
+    <!-- smile med -->
+    <h1>SMILE MEDICINE</h1>
+    <h2>illustration + asset production, 2020</h2>
+    <p>Smile Medicine is a single-player, magical realist adventure dealing with loss and trauma developed for mobile and Switch. After developing early-onset Parkinson’s, an avid hiker confronts her fears on her final trek. Following the trail on which her mother disappeared, Nila must accept it will be the closest she can get to the person she needs most.</p>
+    <div class="slideshow-container">
+      <div class="mySlides1 fade">
+        <img src="smile1.png" alt="opal shards" height="300">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot1" onclick="currentSlide(1, 0)"></span> 
+    </div>
+
+    <!-- ascend -->
+    <h1>ASCEND</h1>
+    <h2>game design + narrative, 2018-19</h2>
+    <p>ASCEND is an immersive, interactive theater experience based on world mythology that ran at USC and at the 2019 Hollywood Fringe Festival. Gods of four mythologies call upon you, their demigod children, to save them from a rising threat. Go on quests to find the truth, prove yourself in a divine tournament and decide how this story ends. Only you can save the world in this interactive, immersive, multi-room experience.</p>
+    <div class="slideshow-container">
+      <div class="mySlides2 fade">
+        <img src="ascend1.png" alt="ascend logo" height="300">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="ascend2.png" alt="ascend actors" height="300">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="ascend3.png" alt="ascend playing cards" height="300">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot2" onclick="currentSlide(1, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(2, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(3, 1)"></span> 
+    </div>
+
+    <!-- chimera -->
+    <h1>CHIMERA</h1>
+    <h2>illustration + narrative, 2018-19</h2>
+    <p>Chimera is a narrative-focused, turn-based combat game combining research-informed concepts of hope and perseverance in an entertainment game developed for PC. The hope system was designed based on optimism research, especially explanatory style, and what that means for motivation and how we behave in difficult situations. Chimera is the second ever game to come out of the USC Games and Health Program.</p>   
+    <div class="slideshow-container">
+      <div class="mySlides3 fade">
+        <img src="chimera1.png" alt="battle background" height="300">
+      </div>
+
+      <div class="mySlides3 fade">
+        <img src="chimera2.png" alt="battle wreckage" height="300">
+      </div>
+
+      <div class="mySlides3 fade">
+        <img src="chimera3.png" alt="chimera characters" height="300">
+      </div>
+
+      <div class="mySlides3 fade">
+        <img src="chimera4.png" alt="the chimera" height="300">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot3" onclick="currentSlide(1, 2)"></span> 
+      <span class="dot3" onclick="currentSlide(2, 2)"></span> 
+      <span class="dot3" onclick="currentSlide(3, 2)"></span> 
+      <span class="dot3" onclick="currentSlide(4, 2)"></span> 
+    </div>
+
+
+    <!-- tofu kid -->
+    <h1>TOFU KID</h1>
+    <h2>art + narrative, 2017</h2>
+    <p>Tofu Kid is a mobile platformer game that was developed at the CMU Game Academy. It focuses on the prince of the forest who has lost his crown and must jump to unbelievable heights to get it back. On the way he must avoid crows, dragons, and aliens, not to mention his own anxieties about ruling a kingdom. Oh, and he’s also made of tofu.</p>
+    <div class="slideshow-container">
+      <div class="mySlides4 fade">
+        <img src="tofu1.png" alt="level complete and tutorial screens" height="300">
+      </div>
+
+      <div class="mySlides4 fade">
+        <img src="tofu2.png" alt="tofu kid" height="300">
+      </div>
+
+      <div class="mySlides4 fade">
+        <img src="tofu3.png" alt="cutscene frames" height="300">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot4" onclick="currentSlide(1, 3)"></span> 
+      <span class="dot4" onclick="currentSlide(2, 3)"></span> 
+      <span class="dot4" onclick="currentSlide(3, 3)"></span> 
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <p>© 2019 by kris yuan</p>
+  </div>
+
+  <!-- code modified from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+  <script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+    var dotId = ["dot1", "dot2", "dot3", "dot4"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    showSlides(1, 3);
+
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+
+    function currentSlide(n, no) {
+      showSlides(slideIndex[no] = n, no);
+    }
+
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      var dots = document.getElementsByClassName(dotId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      if (n < 1) {dotId[no] = dots.length}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      x[slideIndex[no]-1].style.display = "block";
+      dots[slideIndex[no]-1].className += " active";  
+    }
+  </script>
+</body>
+</html>

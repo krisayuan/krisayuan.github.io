@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>digital illustration</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Knewave&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css"href="../page.css">
+</head>
+<body>
+ <!-- header -->
+  <div class="header">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../logo.png" alt="kris yuan" width="450px" height="165px">
+      </a>
+    </div>
+  </div>
+  <!-- navigation bar -->
+  <div class="navbar">
+
+    <a href="../games/games.html">games</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">illustration</button>
+      <div class="dropdown-content">
+        <a href="../illustration/digital.html">digital</a>
+        <a href="../illustration/traditional.html">traditional</a>
+      </div>
+    </div>
+
+    <a href="../index.html">about</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">design</button>
+      <div class="dropdown-content">
+        <a href="../design/graphic.html">graphic</a>
+        <a href="../design/web.html">web</a>
+      </div>
+    </div> 
+
+    <a href="../code/code.html">code</a>
+  </div>
+  
+  <!-- content -->
+  <div class="digital">
+    <!-- empty magic -->
+    <h1>EMPTY MAGIC</h1>
+    <h2>2020(?)</h2>
+    <p>Empty Magic is a (hopefully) to be released soon webcomic about mysteries, magic, omniscient boba baristas, and unsurprisingly, saving the world.</p>
+    <div class="slideshow-container">
+      <div class="mySlides1 fade">
+        <img src="empty1.png" alt="a witch staring out a window" height="600">
+      </div>
+
+      <div class="mySlides1 fade">
+        <img src="empty2.png" alt="a witch taking a nap under a mushroom" height="600">
+      </div>
+
+      <div class="mySlides1 fade">
+        <img src="empty3.png" alt="a witch in an alleyway" height="600">
+      </div>
+
+      <div class="mySlides1 fade">
+        <img src="empty4.png" alt="a cactus and fish" height="600">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot1" onclick="currentSlide(1, 0)"></span> 
+      <span class="dot1" onclick="currentSlide(2, 0)"></span> 
+      <span class="dot1" onclick="currentSlide(3, 0)"></span> 
+      <span class="dot1" onclick="currentSlide(4, 0)"></span> 
+    </div>
+
+    <!-- hanahaki -->
+    <h1>HANAHAKI</h1>
+    <h2>2018</h2>
+    <p>Hanahaki is a series on the Japanese urban legend Hanahaki Disease(花吐き病). The disease is brought on by unrequited love and causes a flower to grow in the victim's chest cavity. As their feelings get stronger, the flower grows larger until it eventually kills them.</p>
+    <div class="slideshow-container">
+      <div class="mySlides2 fade">
+        <img src="hana1.jpg" alt="a person holding a glowing seed" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana2.jpg" alt="a person sitting on a huge plant" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana3.jpg" alt="vines constricting a persons hand" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana4.jpg" alt="leaves covering a face" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana5.jpg" alt="a person transforming into a plant" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana6.jpg" alt="a person falling down into a jungle" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana7.jpg" alt="a person standing on a large plant" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana8.jpg" alt="a plant covering the pupil of an eye" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana9.jpg" alt="a person being constricted by a plant" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana10.jpg" alt="a person breaking free of a jail made of plants" height="600">
+      </div>
+
+      <div class="mySlides2 fade">
+        <img src="hana11.jpg" alt="broken glass over a plant and a person" height="600">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot2" onclick="currentSlide(1, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(2, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(3, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(4, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(5, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(6, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(7, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(8, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(9, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(10, 1)"></span> 
+      <span class="dot2" onclick="currentSlide(11, 1)"></span> 
+    </div>
+  </div>
+
+  <!-- pink frog -->
+  <div class="pink">
+    <a href="../frogs/pink.html">
+      <img src="pink.png" alt="a pink frog with a tutu" width="120">
+    </a>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <p>© 2019 by kris yuan</p>
+  </div>
+
+  <!-- code modified from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+  <script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    var dotId = ["dot1", "dot2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+
+    function currentSlide(n, no) {
+      showSlides(slideIndex[no] = n, no);
+    }
+
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      var dots = document.getElementsByClassName(dotId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      if (n < 1) {dotId[no] = dots.length}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      x[slideIndex[no]-1].style.display = "block";
+      dots[slideIndex[no]-1].className += " active";  
+    }
+  </script>
+
+</body>
+</html>
