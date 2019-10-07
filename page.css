@@ -52,6 +52,7 @@ p{
   padding: 14px 55px;
   float: left;
   color: #f5b4a7;
+  background-color: white;
   font-size: 22px;
   text-align: center;
   text-decoration: none;
@@ -59,6 +60,7 @@ p{
 }
 
 .dropdown {
+  background-color: white;
   margin: 0 auto;
   float: left;
   overflow: hidden;
@@ -70,12 +72,14 @@ p{
   border: none;
   outline: none;
   color: #f5b4a7;
+  background-color: white;
   font-family: inherit;
   font-size: 22px;  
   transition: color 0.3s;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
   color: #242424;
 }
 
