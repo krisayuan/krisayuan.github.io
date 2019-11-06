@@ -8,7 +8,7 @@ grey #989898
 
 body {
   margin: 0 auto;
-  width: 900px;
+  width: 1000px;
   text-align: center;
 }
 
@@ -120,7 +120,6 @@ p{
 .slideshow-container {
   position: relative;
   margin: auto;
-  max-width: 900px;
 }
 
 .dot1, .dot2, .dot3, .dot4 {
@@ -213,6 +212,10 @@ p{
 }
 .web{
   margin: 0 10% 3% 10%;
+}
+.models{
+  margin: 0 auto;
+  margin-bottom: 3%;
 }
 
 /*code*/
