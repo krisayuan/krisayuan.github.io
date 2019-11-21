@@ -213,6 +213,12 @@ p{
 .web{
   margin: 0 10% 3% 10%;
 }
+.web a{
+	text-decoration: none;
+}
+.web a:hover{
+	color: #b1ccd4;
+}
 .models{
   margin: 0 auto;
   margin-bottom: 3%;
