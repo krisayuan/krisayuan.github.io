@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>breathe.</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			margin: 0 auto;
+			padding: 3%;
+			height: 140vh;
+			color: #fff;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			background-image: linear-gradient(#79D7B1, #33AFBB);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 50%, 50%;
+		}
+		h1{
+			margin-bottom: 0;
+			font-size: 50px;
+			font-style: italic;
+		}
+		#about{
+			display: inline-block;
+			margin-top: 100px;
+			font-family: 'Poppins', sans-serif;
+			color: #fff;
+			text-decoration: none;
+		}
+		#about:hover{
+			text-decoration: underline;
+		}
+		#showprofile{
+			display: inline-block;
+			margin-top: 100px;
+			width: 200px;
+			height: 50px;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			font-size: 20px;
+			background-color: white;
+			color: #33AFBB;
+			border: none;
+			transition: 0.5s;
+		}
+		#showprofile:hover{
+			background-color: transparent;
+			color: white;
+		}
+		#profile{
+			margin: auto 0;
+			margin-top: 50px;
+			margin-left: 31%;
+			text-align: center;
+			width: 600px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>breathe.</h1>
+		<p>looped breathing exercises to quell your anxiety</p>
+	</div>
+
+	<div id="content">
+		<img src="1.gif" width="600" id="pic">
+		<p>Breathe in time with the animation for 2 minutes, or as long as necessary.</p>
+
+		<button id="showprofile">click for lore</button>
+		<div id="profile">
+		</div>
+
+		<a href="about.html" id="about">about this site</a>
+		<br>
+		<br>
+		<br>
+
+	</div>
+</body>
+<script type="text/javascript">
+	var i = 0;
+	//array of character profiles
+	var profiles = new Array;
+	profiles[0] = "little gremlin is a bastard child with anxiety. it likes to garden and eat bugs. you can find it in your backyard amongst weeds. little gremlin is friends with kay and C4T. they like to eat brunch on the weekends and read books together.";
+	profiles[1] = "C4T is here to help. They come from a far away world, but decided Earth was a cool planet and was just too lazy to leave. After meeting Kay and little gremlin, C4T realized that earthlings have a lot of fucking anxiety problems. Despite being as lazy as possible, C4T’s new mission is to help earthlings learn the art of calm.";
+	profiles[2] = "Kay is the daughter of two mermaids, gifting her a human body, water powers, and social anxiety. Her brother, Jan, is a fish. When she is anxious, she retreats to the ocean. Her interests include bowling, playing the saxophone, and knitting. She encourages you to stay hydrated!";
+
+	//generating random video
+	var num = Math.floor(Math.random() * 6) + 1;
+	document.querySelector("#pic").src = num + ".gif";
+
+	//changing character profiles
+	document.querySelector("#showprofile").addEventListener("click", function(){
+		if(i%2 != 1){
+			if(num == 1 || num == 2){
+				document.querySelector("#profile").innerHTML = profiles[0];
+				document.querySelector("#showprofile").innerHTML = "hide lore";
+			} else if(num == 3 || num == 4){
+				document.querySelector("#profile").innerHTML = profiles[1];
+				document.querySelector("#showprofile").innerHTML = "hide lore";
+			}else{
+				document.querySelector("#profile").innerHTML = profiles[2];
+				document.querySelector("#showprofile").innerHTML = "hide lore";
+			}
+			i++
+		}else{
+			if(num == 1 || num == 2){
+				document.querySelector("#profile").innerHTML = "";
+				document.querySelector("#showprofile").innerHTML = "show lore";
+			} else if(num == 3 || num == 4){
+				document.querySelector("#profile").innerHTML = "";
+				document.querySelector("#showprofile").innerHTML = "show lore";
+			}else{
+				document.querySelector("#profile").innerHTML = "";
+				document.querySelector("#showprofile").innerHTML = "show lore";
+			}
+			i++
+		}
+	});
+
+</script>
+</html>
