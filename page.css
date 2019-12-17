@@ -79,7 +79,7 @@ p{
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   color: #242424;
 }
 
@@ -213,13 +213,15 @@ p{
 .web{
   margin: 0 10% 3% 10%;
 }
-.web a{
+.web a,h1{
 	text-decoration: none;
+	color: #242424;
+	transition: 0.3s;
 }
-.web a:hover{
+.web h1:hover{
 	color: #b1ccd4;
 }
-.models{
+.anim{
   margin: 0 auto;
   margin-bottom: 3%;
 }
