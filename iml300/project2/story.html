@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>story</title>
+	<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			margin: 0 auto;
+			background-image: url("bg.png");
+			background-repeat: no-repeat;
+			text-align: center;
+			color: black;
+			font-family: 'Mansalva', cursive;
+		}
+		#content{
+			margin-top: 5%;
+			margin-left: 20%;
+			padding: 2%;
+			width: 50%;
+			height: 50%;
+			border-radius: 20px;
+			background-color: #F9F8DA;
+			opacity: 0.8;
+		}
+		#desc{
+			font-size: 30px;
+		}
+
+		#angel{
+			display: inline-block;
+			margin: 1%;
+			padding: 2%;
+			border-radius: 20px;
+			background-color: #CCB8EF;
+			font-size: 20px;
+			vertical-align: middle;
+		}
+		#angel:hover{
+			background-color: #A88BDC;
+		}
+
+		#asshole{
+			display: inline-block;
+			margin: 1%;
+			padding: 2%;
+			border-radius: 20px;
+			background-color: #B8D9EF;
+			font-size: 20px;
+			vertical-align: middle;
+		}
+		#asshole:hover{
+			background-color: #8BC0E4;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="content">
+		<div id="desc">
+			you walk into the meadow and see a small creature under a willow tree
+		</div>
+
+		<div id="angel">
+			walk over and pat him on the head
+		</div>
+
+		<div id="asshole">
+			walk over and *BONK* his noggin
+		</div>
+
+		<br>
+		<br>
+		<img src="2.png" width="600" id="img">
+	</div>
+
+	<script type="text/javascript">
+		var desc = document.querySelector("#desc");
+		var angel = document.querySelector("#angel");
+		var asshole = document.querySelector("#asshole");
+		var img = document.querySelector("img");
+		var i = 0;
+
+		var goodc = new Array;
+		goodc[0] = "the muse is really your estranged father and you are his bastard son, gary. tell him the truth about your origins.";
+		goodc[1] = "you know that butterfly blossoms are extremely fragile and would not make for good construction materials. tell him that it’s too dangerous to even attempt.";
+		goodc[2] = "“well shmorg, you can’t blame them. you construct buildings that may have been beautiful, but also put lives and belongings at stake. you are being very selfish, and you’re ignoring the needs of the people. that’s not what a good village architect should do.”";
+
+
+		var badc = new Array;
+		badc[0] = "the muse is really your estranged father and you are his bastard son, gary. lie because you hate your father and would do anything to slander his name.";
+		badc[1] = "you know that butterfly blossoms are extremely fragile and would not make for good construction materials. encourage his dangerous construction practices and his inevitable downfall.";
+		badc[2] = "“well shmorg, you’re totally correct. if you want to ignore the needs and wishes of everyone else to focus on yourself, you should be able to do that. everyone should lookout for themselves first, it’s a cat-eat-cat world out there, and you were just having a meal.”";
+
+		var story = new Array;
+		story[0] = "he looks up at you with wonder, “are you the muse of the forest?” he asks";
+		story[1] = "he looks up at you and scowls, “are you the muse of the forest?” he questions";
+		story[2] = "“oh, i was looking for the muse, but i guess the opinion of an unartistic creature like yourself would appeal to the masses. you see,  im an architect but i’m very small and have very little money, so you can imagine the kind of stress i am under.” he sighs. then he twiddles his paws and asks, “i am building a school for my town of Smolville, should I build it out of butterfly blossoms? they aren’t very sturdy, but they are beautiful and soft.”";
+		story[3] = "“wow! i never thought i would meet the real muse! im an architect but i’m very small and have very little money, so you can imagine the kind of stress i am under.” he sighs. then he twiddles his paws and asks, “i am building a school for my town of Smolville, should I build it out of butterfly blossoms? they aren’t very sturdy, but they are beautiful and soft.”";
+		story[4] = "“oh perfect! i knew my ideas were correct, even the uneducated agree!” he chatters excitedly. it seems that he is going to go through with his plans no matter what.";
+		story[5] = "“hmph. well i guess i wouldn’t expect someone inexperienced to understand.” he huffs loftily. you get the sense that this little bastard is going to go through with his plans no matter what.";
+		story[6] = "“oh perfect! i knew my ideas were correct, and now they’ve been approved by a god hah!” he chatters excitedly. it seems that he is going to go through with his plans no matter what.";
+		story[7] = "“really? well, maybe you’ve lost  your touch mr. muse, because i think it’s a wonderful idea” he huffs loftily. you get the sense that this little bastard is going to go through with his plans no matter what.";
+		story[8] = "shmorg turns and runs back towards smolville, richard the floofle in tow.";
+		story[9] = "a while passes and shmorg comes stomping back down the path. “they don’t understand my art! why doesn’t anyone get it?!” he yells. “i created beautiful buildings and yet none of those peasants can truly appreciate my handiwork.” after his outburst he plops into the grass and sighs, “oh gary, what should i do? everyone in the village hates me and i just can’t understand why.”";
+		story[10] = "shmorg looks contemplative and mutters, “ignoring the needs?...hmm..HMM..maybe I was wrong..well….” he turns to look at you, “yeah that resonates, i think i need to ruminate on this information. thanks gary. come along richard!”  richard nods and hops after shmorg, who begins walking back to Smolville.";
+		story[11] = "shmorg looks contemplative and mutters, “looking out for myself?...i just wanted..i was trying to….hmmm” he turns to look at you, “you may be comfortable with being an asshole, but i’m not.  i think i need to ruminate on this information. thanks gary. come along richard!”  richard nods and hops after shmorg, who begins walking back to Smolville.";
+		story[12] = "unbeknownst to you, shmorg and richard return to Smolville as changed creatures. Shmorg realizes the error of his ways, and becomes a more helpful and generous architect, and richard stops stealing pastries from the local cafe.";
+
+		function angelcheck(){
+			if (angel.innerHTML.indexOf("pat") >= -1 && i == 0){
+				angel.innerHTML = goodc[0];
+				asshole.innerHTML = badc[0];
+				desc.innerHTML = story[0];
+				img.src = "3a.png";
+			}else if (angel.innerHTML.indexOf("truth") >= -1 && i == 1){
+				angel.innerHTML = goodc[1];
+				asshole.innerHTML = badc[1];
+				desc.innerHTML = story[2];
+				img.src = "4a.png";
+			}else if (desc.innerHTML.indexOf("unartistic") >= -1 && i == 2){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[5];
+				img.src = "5a.png";
+			}else if (desc.innerHTML.indexOf("real muse") >= -1 && i == 2){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[7];
+				img.src = "5b.png";
+			}else if (angel.innerHTML.indexOf("next") >= -1 && i == 3){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[8];
+				img.src = "6.png";
+			}else if (angel.innerHTML.indexOf("next") >= -1 && i == 4){
+				angel.innerHTML = goodc[2];
+				asshole.innerHTML = badc[2];
+				desc.innerHTML = story[9];
+				img.src = "7.png";
+			}else if (angel.innerHTML.indexOf("blame") >= -1 && i == 5){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[10];
+				img.src = "8.png";
+			}else if (angel.innerHTML.indexOf("next") >= -1 && i == 6){
+				angel.innerHTML = "the";
+				asshole.innerHTML = "end";
+				desc.innerHTML = story[12];
+				img.src = "9.png";
+			}
+		}
+		
+		function assholecheck(){
+			if (asshole.innerHTML.indexOf("noggin") >= -1 && i == 0){
+				angel.innerHTML = goodc[0];
+				asshole.innerHTML = badc[0];
+				desc.innerHTML = story[1];
+				img.src = "3b.png";
+			}else if (asshole.innerHTML.indexOf("lie") >= -1 && i == 1){
+				angel.innerHTML = goodc[1];
+				asshole.innerHTML = badc[1];
+				desc.innerHTML = story[3];
+				img.src = "4b.png";
+			}else if (desc.innerHTML.indexOf("unartistic") >= -1 && i == 2){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[4];
+				img.src = "5c.png";
+			}else if (desc.innerHTML.indexOf("real muse") >= -1 && i == 2){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[6];
+				img.src = "5d.png";
+			}else if (asshole.innerHTML.indexOf("next") >= -1 && i == 3){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[8];
+				img.src = "6.png";
+			}else if (asshole.innerHTML.indexOf("next") >= -1 && i == 5){
+				angel.innerHTML = goodc[2];
+				asshole.innerHTML = badc[2];
+				desc.innerHTML = story[9];
+				img.src = "7.png";
+			}else if (asshole.innerHTML.indexOf("blame") >= -1 && i == 6){
+				angel.innerHTML = "next";
+				asshole.innerHTML = "next";
+				desc.innerHTML = story[11];
+				img.src = "8.png";
+			}else if (asshole.innerHTML.indexOf("next") >= -1 && i == 7){
+				angel.innerHTML = "the";
+				asshole.innerHTML = "end";
+				desc.innerHTML = story[12];
+				img.src = "9.png";
+			}
+		}
+
+		document.querySelector("#angel").addEventListener("click", function(){
+				angelcheck();
+				i++;
+			});
+		document.querySelector("#asshole").addEventListener("click", function(){
+				assholecheck();
+				i++;
+			});
+	</script>
+</body>
+</html>
