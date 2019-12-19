@@ -246,8 +246,9 @@ p{
   font-family: 'Josefin Slab', serif;
 }
 
-.code video{
+.code iframe{
   margin: 0 auto;
+  margin-top: 2%;
   margin-bottom: 8%;
 }
 
