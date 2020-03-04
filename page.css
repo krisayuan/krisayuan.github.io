@@ -122,7 +122,7 @@ p{
   margin: auto;
 }
 
-.dot1, .dot2, .dot3, .dot4 {
+.dot1, .dot2, .dot3, .dot4, .dot5 {
   display: inline-block;
   margin: 2% 2px 2% 2px;
   cursor: pointer;
@@ -133,7 +133,8 @@ p{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover{
+.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover{
+  display: inline-block;
   background-color: #717171;
 }
 

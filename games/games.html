@@ -49,12 +49,20 @@
     <p>Smile Medicine is a single-player, magical realist adventure dealing with loss and trauma developed for mobile and Switch. After developing early-onset Parkinson’s, an avid hiker confronts her fears on her final trek. Following the trail on which her mother disappeared, Nila must accept it will be the closest she can get to the person she needs most.</p>
     <div class="slideshow-container">
       <div class="mySlides1 fade">
-        <img src="smile1.png" alt="opal shards" height="300">
+        <img src="smile1.png" alt="opal shards" height="450">
+      </div>
+      <div class="mySlides1 fade">
+        <img src="smile2.png" alt="sprites" height="450">
+      </div>
+      <div class="mySlides1 fade">
+        <img src="smile3.gif" alt="animation" height="450">
       </div>
     </div>
 
     <div style="text-align:center">
       <span class="dot1" onclick="currentSlide(1, 0)"></span> 
+      <span class="dot1" onclick="currentSlide(2, 0)"></span>
+      <span class="dot1" onclick="currentSlide(3, 0)"></span>
     </div>
 
     <!-- ascend -->
@@ -97,17 +105,12 @@
       <div class="mySlides3 fade">
         <img src="chimera3.png" alt="chimera characters" height="300">
       </div>
-
-      <div class="mySlides3 fade">
-        <img src="chimera4.png" alt="the chimera" height="300">
-      </div>
     </div>
 
     <div style="text-align:center">
       <span class="dot3" onclick="currentSlide(1, 2)"></span> 
       <span class="dot3" onclick="currentSlide(2, 2)"></span> 
       <span class="dot3" onclick="currentSlide(3, 2)"></span> 
-      <span class="dot3" onclick="currentSlide(4, 2)"></span> 
     </div>
 
 
@@ -143,7 +146,7 @@
 
   <!-- code modified from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
   <script>
-    var slideIndex = [1,1];
+    var slideIndex = [1,2];
     var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
     var dotId = ["dot1", "dot2", "dot3", "dot4"]
     showSlides(1, 0);
@@ -161,9 +164,12 @@
 
     function showSlides(n, no) {
       var i;
-      var x = document.getElementsByClassName(slideId[no]);
+      var x = document.getElementsByClassName(slideId[no]); 
+      // x is the myslidesnum
       var dots = document.getElementsByClassName(dotId[no]);
-      if (n > x.length) {slideIndex[no] = 1}    
+      // dots is the second num
+      if (n > x.length) {slideIndex[no] = 1} 
+
       if (n < 1) {slideIndex[no] = x.length}
       for (i = 0; i < x.length; i++) {
          x[i].style.display = "none";  
